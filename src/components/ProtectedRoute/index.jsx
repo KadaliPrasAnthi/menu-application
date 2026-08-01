@@ -1,11 +1,12 @@
-import Cookies from 'js-cookie'
-import {Navigate} from 'react-router-dom'
+import Cookies from 'js-cookie';
+import {Navigate} from 'react-router-dom';
 const ProtectedRoute=({children})=>{
-    if(Cookies.get('party-menu-token')===undefined){
-       return <Navigate to="/login" replace/>
+    const token = Cookies.get("party-menu-token");
+    console.log("ProtectedRoute token:", token);
+    if(!token){
+       return <Navigate to="/login" replace />;
     }
-    else{
-        return children
-    }
-}
+       return children;
+    
+};
 export default ProtectedRoute
