@@ -3,7 +3,7 @@ import Login from './components/Login'
 import ProtectedRoute  from './components/ProtectedRoute'
 import MainMenu from './components/MainMenu'
 import NotFound from './components/NotFound'
-
+import FoodDetails from './components/MenuDetails'
 import './App.css'
 
 const App=()=>{
@@ -15,6 +15,7 @@ const App=()=>{
      <Route path="/login" element={<Login/>}/>
      
     <Route path="/" element={<ProtectedRoute><MainMenu/></ProtectedRoute>}/>
+     <Route path="/menu/:id" element={<FoodDetails/>}/>
      <Route path="*" element={<NotFound/>}/>
   </Routes>
   
