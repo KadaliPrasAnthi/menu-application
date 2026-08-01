@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 import {Navigate} from 'react-router-dom'
 const ProtectedRoute=({children})=>{
     if(Cookies.get('party-menu-token')===undefined){
-        <Navigate to="/login"/>
+       return <Navigate to="/login" replace/>
     }
     else{
         return children
