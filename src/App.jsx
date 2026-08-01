@@ -13,7 +13,7 @@ const App=()=>{
   <Routes>
    
      <Route path="/login" element={<Login/>}/>
-     <Route path="/" element={<MainMenu/>}/>
+     
     <Route path="/" element={<ProtectedRoute><MainMenu/></ProtectedRoute>}/>
      <Route path="*" element={<NotFound/>}/>
   </Routes>
