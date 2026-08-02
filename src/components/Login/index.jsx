@@ -19,7 +19,7 @@ const Login=()=>{
         localStorage.setItem('party-menu-user',JSON.stringify(userDetails));
         console.log(localStorage.getItem('party-menu-user'))
         console.log(Cookies.get('party-menu-token'));
-        navigate("/");
+        navigate("/",{replace:true});
         console.log("navigated to home page");
     }
     const onFailure=(data)=>{
