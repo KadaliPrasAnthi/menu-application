@@ -85,9 +85,12 @@ const SavedRecipes = () => {
     );
   } 
   return (
-    <div className="saved-recipes-container">
+    <div className="saved-recipes-main-container">
+      <div className="saved-recipes-container">
         {savedRecipesNavbar()}
         {savedRecipes.length === 0 ? noRecipesSavedView() : recipesSavedView()}
+      </div>
+        
     </div>
   );
 };

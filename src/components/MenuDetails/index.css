@@ -1,11 +1,12 @@
 .menu-details-main-container{
     background-color: black;
     min-height:100vh;
-    width:100vw;
+    width:100%;
     display: flex;
     flex-direction: column;
    padding-left: 0px;
-  
+   /* border:1px solid yellow; */
+   
    /* border: 1px solid green; */
     
 }
@@ -95,7 +96,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    min-height:60vh;
     margin-top: 20px;
     /* border: solid 1px pink; */
     
@@ -103,10 +104,10 @@
 }
 .menu-details-image-container{
     width: 100%;
-    height: 50%;
+    height:30vh;
     border-radius: 10px;
     
-    /* border: solid 1px pink; */
+    /* border: solid 1px yellow; */
 }
 .menu-details-image-container img{
     width: 100%;
@@ -120,7 +121,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     color: white;
-    height:40%;
+    
     width:100%;
     padding-top: 10px;
     padding-left: 20px;
@@ -208,11 +209,12 @@
     border: 1px solid rgb(121, 121, 124);
     box-sizing: border-box;
 }
-@media (min-width: 768px) {
+/*large devices---------------------------------------------*/
+@media screen and (min-width: 768px) {
     .menu-details-main-container{
     background-color: black;
     min-height:100vh;
-    width:100vw;
+    width:100%;
     display: flex;
     flex-direction: column;
    
@@ -222,8 +224,8 @@
     
     
    min-height: 100vh;
-    width:80%;
-    /* border: 1px solid pink; */
+    width:65%;
+    border: 1px solid pink;
     
 }
 .menu-details-navbar{
@@ -234,6 +236,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    width: 100%;
     /* border: solid 1px pink; */
 }
 .menu-details-navbar-left{
@@ -285,20 +288,20 @@
     align-items: center;
     
     margin-top: 20px;
-    /* border: solid 1px pink; */
-    height:40vh;
+    border: solid 1px yellow;
+    min-height:10vh;
 
 }
 .menu-details-image-container{
     width: 50%;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 10px;
     
-    /* border: solid 1px pink; */
+    border: solid 1px pink;
 }
 .menu-details-image-container img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -314,7 +317,7 @@
     padding-left: 20px;
     box-sizing: border-box;
     background-color: rgb(15, 15, 17);
-    /* border: solid 1px yellow; */
+    border: solid 1px pink;
     
 }
 

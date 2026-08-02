@@ -1,19 +1,28 @@
-.saved-recipes-container{
+.saved-recipes-main-container{
     background-color: black;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+}
+.saved-recipes-container{
     width:100%;
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    /* border:1px solid yellow; */
+    border:1px solid yellow;
     align-items: flex-start;
-    padding:10px;
 }
 .saved-recipes-navbar{
     display:flex;
     justify-content:space-between;
-    
-    width:100%;
-    /* border: 1px solid yellow; */
+    width: 95%;
+   padding-bottom:10px;
+    border: 1px solid pink;
 }
 .saved-recipes-navbar h1{
     color:white;
@@ -123,11 +132,20 @@
     cursor:pointer;
 }
 
-/* large devices*/
+/* large devices---------------------------------------------*/
 @media (min-width: 768px) {
-   .saved-recipes-container{
+   .saved-recipes-main-container{
     background-color: black;
     width:100%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.saved-recipes-container{
+    
+    width:70%;
     min-height:100vh;
     display:flex;
     flex-direction:column;
@@ -139,7 +157,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:100%;
+    width:95%;
     /* border: 1px solid yellow; */
 }
 .saved-recipes-navbar h1{
