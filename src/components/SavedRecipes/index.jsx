@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IoArrowBack } from "react-icons/io5";
+import { MdDelete } from "react-icons/md";
 import "./index.css";
 const ItemCard=({itemDetails,onClickItem,onClickDelete})=>{
    const{id,name,description,category,servings,image,isVeg}=itemDetails
@@ -42,7 +44,8 @@ const SavedRecipes = () => {
     return (
       <div className="no-saved-recipe-view">
         
-        <p>No recipes saved.</p>
+        <p>No saved recipes yet.</p>
+        <p className="browse-menu-link" onClick={()=>navigate('/')}>Browse the menu</p>
       </div>
     );
   }
@@ -54,11 +57,16 @@ const SavedRecipes = () => {
         <p>{savedRecipes.length} recipes saved.</p>
         </div>
         <div>
-            <button className="remove-all-button" onClick={() => {
+            <button title="Remove all" className="remove-all-button" onClick={() => {
                 setSavedRecipes([]);
                 localStorage.removeItem("savedRecipes");
-            }}>Remove All</button>
-            <button className="back-to-menu-button" onClick={() => navigate('/')}>Back to Menu</button>
+            }}>Remove All<MdDelete/></button>
+            <button title="Remove all" className="remove-all-button-sm" onClick={() => {
+                setSavedRecipes([]);
+                localStorage.removeItem("savedRecipes");
+            }}><MdDelete/></button>
+            <button className="back-to-menu-button" onClick={() => navigate('/')}><IoArrowBack className="arrow-back-icon"/>Back to Menu</button>
+            <button className="back-to-menu-button-sm" onClick={() => navigate('/')}><IoArrowBack className="arrow-back-icon"/> Menu</button>
         </div>
         
       </div>

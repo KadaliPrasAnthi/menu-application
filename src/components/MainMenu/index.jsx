@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 import {useState,useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,useLocation} from 'react-router-dom'
 import {initialMenuData,filterMenuItems} from '../../data/menuData'
 import './index.css'
 /**<li className='item-card'>
@@ -1702,7 +1702,9 @@ const MainMenu=()=>{
   const [menuData,setMenuData]=useState(initialMenuData)
   const [itemCategory,setCategory]=useState(null)
   const [itemIsVeg,setIsVeg]=useState(null)
+  const [savedRecipesCount,setSavedRecipesCount]=useState(0);
   const navigate=useNavigate();
+  const location=useLocation();
   useEffect(()=>{
     // let filteredItems=initialMenuData;
     
@@ -1723,6 +1725,7 @@ const MainMenu=()=>{
     //   each.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
     // ))
     // }
+    
     const filteredItems=filterMenuItems({
        category: itemCategory, 
        diet: itemIsVeg, 
@@ -1731,6 +1734,13 @@ const MainMenu=()=>{
     setMenuData(filteredItems)
     setItemCount(filteredItems.length)
   },[itemCategory,searchInput,itemIsVeg])
+  
+  useEffect(() => {
+  const savedRecipes =
+    JSON.parse(localStorage.getItem("savedRecipes")) || [];
+    setSavedRecipesCount(savedRecipes.length);
+  }, [location]);
+
   const onClickItem=(id)=>{
     console.log(id)
     navigate(`/menu/${id}`)
@@ -1780,7 +1790,7 @@ const MainMenu=()=>{
       <p>Welcome, Admin User</p>
       </div>
       <ul className='nav-ul-container'>
-        <li><button onClick={onClickSavedRecipes}>Saved Recipes</button></li>
+        <li><button onClick={onClickSavedRecipes}>Saved Recipes{savedRecipesCount>0&&<span className='saved-recipes-count'>{savedRecipesCount}</span>}</button></li>
         <li><button onClick={onClickLogout}>Logout</button></li>
       </ul>
     </nav>

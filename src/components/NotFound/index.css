@@ -1,0 +1,30 @@
+.not-found-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+.not-found-container h1{
+    color: rgb(219, 107, 14);
+    font-weight: bold;
+    font-size: 40px;
+}
+.not-found-container h2{
+    color: white;
+}
+.not-found-container p{
+    color: rgb(117, 121, 125);
+
+}
+.not-found-container button{
+    background-color: rgb(240, 124, 7);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
