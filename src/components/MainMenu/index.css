@@ -258,7 +258,7 @@ display: inline-block;
 .item-card{
         width:28%;
         
-        min-height:330px;
+        min-height:310px;
         overflow:scroll;
         margin: 20px;
     }

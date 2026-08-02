@@ -14,7 +14,7 @@
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    border:1px solid yellow;
+    /* border:1px solid yellow; */
     align-items: flex-start;
 }
 .saved-recipes-navbar{
@@ -22,7 +22,7 @@
     justify-content:space-between;
     width: 95%;
    padding-bottom:10px;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
 }
 .saved-recipes-navbar h1{
     color:white;

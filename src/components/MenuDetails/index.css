@@ -225,7 +225,7 @@
     
    min-height: 100vh;
     width:65%;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     
 }
 .menu-details-navbar{
@@ -288,7 +288,7 @@
     align-items: center;
     
     margin-top: 20px;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
     min-height:10vh;
 
 }
@@ -297,7 +297,7 @@
     /* height: 100%; */
     border-radius: 10px;
     
-    border: solid 1px pink;
+    /* border: solid 1px pink; */
 }
 .menu-details-image-container img{
     width: 100%;
@@ -317,7 +317,7 @@
     padding-left: 20px;
     box-sizing: border-box;
     background-color: rgb(15, 15, 17);
-    border: solid 1px pink;
+    /* border: solid 1px pink; */
     
 }
 
