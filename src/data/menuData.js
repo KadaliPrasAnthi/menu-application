@@ -1606,19 +1606,19 @@ export const getMenuItemById = (id) => {
   return menuItem;
 };
 export const filterMenuItems=(params) => {
-  const { category, isVeg, searchInput } = params;
+  const { category, diet, name } = params;
   let filteredItems = initialMenuData;
 
   if (category!==null) {
     filteredItems = filteredItems.filter(item => item.category === category);
   }
 
-  if (isVeg !== null) {
-    filteredItems = filteredItems.filter(item => item.isVeg === isVeg);
+  if (diet !== null) {
+    filteredItems = filteredItems.filter(item => item.isVeg === diet);
   }
 
-  if (searchInput!=='') {
-    filteredItems = filteredItems.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()));
+  if (name!=='') {
+    filteredItems = filteredItems.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
   }
   console.log("filteredItems", filteredItems);
   return filteredItems;

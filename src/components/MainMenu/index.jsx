@@ -1725,8 +1725,8 @@ const MainMenu=()=>{
     // }
     const filteredItems=filterMenuItems({
        category: itemCategory, 
-       isVeg: itemIsVeg, 
-       searchInput ,
+       diet: itemIsVeg, 
+       name: searchInput,
       });
     setMenuData(filteredItems)
     setItemCount(filteredItems.length)
