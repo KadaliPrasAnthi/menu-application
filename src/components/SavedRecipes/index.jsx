@@ -40,27 +40,45 @@ const SavedRecipes = () => {
   }
   const noRecipesSavedView=()=>{
     return (
-      <div>
-        <h1>Saved Recipes</h1>
+      <div className="no-saved-recipe-view">
+        
         <p>No recipes saved.</p>
+      </div>
+    );
+  }
+  const savedRecipesNavbar=()=>{
+    return (
+      <div className="saved-recipes-navbar">
+        <div>
+            <h1>Saved Recipes</h1>
+        <p>{savedRecipes.length} recipes saved.</p>
+        </div>
+        <div>
+            <button className="remove-all-button" onClick={() => {
+                setSavedRecipes([]);
+                localStorage.removeItem("savedRecipes");
+            }}>Remove All</button>
+            <button className="back-to-menu-button" onClick={() => navigate('/')}>Back to Menu</button>
+        </div>
+        
       </div>
     );
   }
   const recipesSavedView=()=>{
     return (
-      <div className="saved-recipes-container">
-        <h1>Saved Recipes</h1>
-        <p>{savedRecipes.length} recipes saved.</p>
+      
+       
         <ul className="saved-recipes-ul-container">
           {savedRecipes.map(recipe => (
             <ItemCard key={recipe.id} itemDetails={recipe} onClickItem={handleItemClick} onClickDelete={handleDeleteItem} />
           ))}
         </ul>
-      </div>
+     
     );
   } 
   return (
-    <div>
+    <div className="saved-recipes-container">
+        {savedRecipesNavbar()}
         {savedRecipes.length === 0 ? noRecipesSavedView() : recipesSavedView()}
     </div>
   );

@@ -1769,6 +1769,9 @@ const MainMenu=()=>{
     console.log(value)
     setIsVeg(value)
   }
+  const onClickSavedRecipes=()=>{
+    navigate('/saved-recipes')
+  }
   return <div className='party-menu-container'>
     <div className='party-menu-content-container'>
        <nav className='menu-navbar'>
@@ -1777,7 +1780,7 @@ const MainMenu=()=>{
       <p>Welcome, Admin User</p>
       </div>
       <ul className='nav-ul-container'>
-        <li><button>Saved Recipes</button></li>
+        <li><button onClick={onClickSavedRecipes}>Saved Recipes</button></li>
         <li><button onClick={onClickLogout}>Logout</button></li>
       </ul>
     </nav>
