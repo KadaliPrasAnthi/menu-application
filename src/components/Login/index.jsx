@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import { Navigate } from 'react-router-dom';
 
 import './index.css';
 
@@ -60,7 +61,11 @@ const Login=()=>{
     const onChangePassword=(e)=>{
         setPassword(e.target.value);
     }
-        
+    //user already logged in
+    const token=Cookies.get('party-menu-token')
+     if(token!==undefined){
+        return <Navigate to="/" replace/>
+     }
     
     return(
         <div className="login-container">
